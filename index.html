@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reily Fisher - Social Links</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); /* Import a stylish font */
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -53,11 +51,21 @@
             color: #0056b3;
         }
 
-        .top-photo, .bottom-photo {
-            text-align: center;
+        .heartbeat-logo img {
+            width: 500px;
+            height: auto;
+            margin-top: 100px;
+            margin-bottom: 20px;
+            max-width: 100%; /* Ensures the logo never overflows on small screens */
         }
 
-        .top-photo img, .bottom-photo img {
+        @media (max-width: 600px) {
+            .heartbeat-logo img {
+                width: 400px; /* Smaller size for mobile screens */
+            }
+        }
+
+        .bottom-photo img {
             width: 300px; /* Keep the image size */
             height: 300px;
             object-fit: cover;
@@ -65,12 +73,6 @@
             border: 6px solid white;
             display: block;
             margin: 40px auto;
-        }
-
-        .heartbeat-logo img {
-            width: 500px; /* Double the size of the heartbeat logo */
-            height: auto;
-            margin-bottom: 20px;
         }
 
         .social-links img {
@@ -88,16 +90,13 @@
 </head>
 <body>
 
-    <div class="top-photo">
-        <img src="images/guitar2.jpg" alt="Your Guitar Photo 2">
-    </div>
+    <!-- Removed the top-photo section -->
 
     <div class="heartbeat-logo">
         <img src="logos/heartbeat-logo.png" alt="Heartbeat Logo">
     </div>
 
     <div class="container">
-        <!-- Removed the "Reily Fisher" text here -->
         <ul class="social-links">
             <li><a href="https://open.spotify.com/artist/4v0TEcF4RlqUlF5NQm6zFQ?si=sw4LBaMQSI-o2AcVyGgGcA" target="_blank"><img src="logos/spotify-logo.png" alt="Spotify"></a></li>
             <li><a href="https://music.apple.com/us/artist/reily-fisher/1773505825" target="_blank"><img src="logos/apple-logo.png" alt="Apple Music"></a></li>
