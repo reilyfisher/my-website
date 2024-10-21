@@ -10,7 +10,7 @@
 
         /* Body and general styling */
         body {
-            font-family: 'Poppins', sans-serif; /* Default font */
+            font-family: 'Comic Sans MS'; /* Default font */
             margin: 0;
             padding: 0;
             font-size: 22px;
@@ -83,7 +83,7 @@
         }
 
         .latest-release-section h2 {
-            font-family: 'Lobster', cursive;
+            font-family: 'Comic Sans MS';
             font-size: 2em;
             margin-bottom: 20px;
         }
@@ -126,7 +126,7 @@
         }
 
         .column h3 {
-            font-family: 'Lobster', cursive;
+            font-family: 'Comic Sans MS', cursive;
             font-size: 1.8em;
             margin-bottom: 20px;
         }
@@ -165,14 +165,15 @@
             background-color: rgba(255, 255, 255, 0.4);
             display: flex;
             justify-content: flex-end;
-            padding: 10px 10px; /* Reduced padding on the right for better mobile alignment */
+            padding: 10px 20px; /* Reduced padding on the right for better mobile alignment */
             z-index: 100;
         }
 
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 10px; /* Reduced gap between logos on mobile */
+            gap: 20px; /* Reduced gap between logos on mobile */
+            margin-right: 40px;
         }
 
         .nav-links li {
@@ -180,7 +181,7 @@
         }
 
         .nav-links a img {
-            width: 30px;
+            width: 38px;
             height: auto;
             vertical-align: middle;
         }
@@ -193,20 +194,21 @@
         @media (max-width: 768px) {
             /* Change font to Comic Sans on mobile */
             body {
-                font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Set Comic Sans for mobile */
+                font-family: 'Comic Sans MS', 'Comic Sans'; /* Set Comic Sans for mobile */
                 font-size: 18px;
             }
 
             /* Adjust intro section for mobile */
             #intro {
-                background-size: contain; /* Fit image based on width for mobile */
+                background-size: 100%; /* Fit image based on width for mobile */
                 background-position: center;
+                height: 100vh;
             }
 
             .heartbeat-logo img {
                 width: 30vw; /* Adjust logo size for mobile */
-                right: 5vw; /* Adjust logo position for smaller screens */
-                top: 10vh; /* Adjust top position for mobile */
+                right: 40px; /* Adjust logo position for smaller screens */
+                top: 40px; /* Adjust top position for mobile */
             }
 
             /* Stack the columns vertically for mobile */
@@ -226,13 +228,11 @@
             /* Adjust right margin for mobile */
             .top-nav {
                 padding-right: 10px; /* Make sure the logos align to the right */
+                justify-content: center;
             }
 
             .nav-links {
-                gap: 10px; /* Reduce gap between logos */
-            }
-
-            .nav-links {
+                gap: 10px; /* Reduce gap for mobile */
                 margin-right: 0; /* Remove excess right margin */
             }
         }
