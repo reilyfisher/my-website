@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reily Fisher - Social Links</title>
     <style>
-        /* Import the fonts you are using */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        /* Import the fonts */
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;700&display=swap');
 
         /* Body and general styling */
         body {
-            font-family: 'Comic Sans MS', sans-serif; /* Default font for the entire body */
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             font-size: 22px;
-            background-image: url('images/background.webp'); /* This is the current background */
+            background-image: url('images/background.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -26,11 +25,11 @@
             justify-content: space-between;
             align-items: center;
             min-height: 100vh;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-x: hidden;
             transition: background-image 1s ease;
         }
 
-        /* Fullscreen intro section with responsive background */
+        /* Fullscreen intro section */
         #intro {
             position: fixed;
             top: 0;
@@ -38,9 +37,8 @@
             width: 100%;
             height: 100vh;
             background-image: url('images/intro-photo.png'); /* Full-screen photo */
-            background-size: cover; /* Dynamically adjusts based on viewport */
-            background-position: center center; /* Center the image on both axes */
-            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             z-index: 1;
             display: flex;
             justify-content: flex-end;
@@ -50,17 +48,14 @@
             padding: 20px;
         }
 
-    /* Heartbeat logo dynamically positioned and sized */
-    .heartbeat-logo {
-        position: absolute;
-        top: 20vh; /* 20% from the top of the viewport */
-        right: 6vw; /* 7% from the right of the viewport */
-        z-index: 2;
-        transition: opacity 1s ease;
-    }
+        /* Heartbeat logo without fixed sizes */
+        .heartbeat-logo {
+            position: absolute;
+            z-index: 2;
+            transition: opacity 1s ease;
+        }
 
         .heartbeat-logo img {
-            width: 25vw; /* Adjust the size based on viewport width */
             height: auto;
         }
 
@@ -77,7 +72,7 @@
 
         .container {
             text-align: center;
-            max-width: 100%; /* Ensure content doesn’t overflow on small screens */
+            max-width: 100%;
             padding: 20px;
         }
 
@@ -88,22 +83,22 @@
         }
 
         .latest-release-section h2 {
-            font-family: 'Comic Sans MS', cursive; /* Font for headings */
+            font-family: 'Lobster', cursive;
             font-size: 2em;
             margin-bottom: 20px;
         }
 
         .latest-release-section img {
-            width: 300px; /* Image size */
+            width: 300px;
             height: auto;
-            border-radius: 10px; /* Optional rounded corners */
+            border-radius: 10px;
         }
 
         .latest-release-section a {
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: rgba(74, 118, 158, 0.82); /* Navy blue background for all buttons */
+            background-color: rgba(74, 118, 158, 0.82);
             color: white;
             text-decoration: none;
             font-size: 1.2em;
@@ -112,7 +107,7 @@
         }
 
         .latest-release-section a:hover {
-            background-color: rgba(57, 90, 120, 0.82); /* Lighter navy blue on hover */
+            background-color: rgba(57, 90, 120, 0.82);
         }
 
         /* Two-column layout for Listen and Socials sections */
@@ -125,34 +120,34 @@
 
         .column {
             display: flex;
-            flex-direction: column; /* Stack the logos vertically */
-            align-items: center; /* Center the logos within the column */
+            flex-direction: column;
+            align-items: center;
             text-align: center;
         }
 
         .column h3 {
-            font-family: 'Comic Sans MS', cursive; /* Font for headings */
+            font-family: 'Lobster', cursive;
             font-size: 1.8em;
             margin-bottom: 20px;
         }
 
         .column a {
             display: inline-block;
-            margin: 15px 0; /* Space between logos */
-            width: 50px; /* Set the desired size of the logo container */
+            margin: 15px 0;
+            width: 50px;
             height: 50px;
             padding: 0;
-            text-decoration: none; /* Remove underline */
-            transition: opacity 0.3s ease; /* Add a subtle hover effect */
+            text-decoration: none;
+            transition: opacity 0.3s ease;
         }
 
         .column a img {
-            width: 100%; /* Make the logo take up the entire container */
-            height: auto; /* Maintain aspect ratio */
+            width: 100%;
+            height: auto;
         }
 
         .column a:hover {
-            opacity: 0.8; /* Make the logo slightly dim on hover */
+            opacity: 0.8;
         }
 
         footer {
@@ -167,17 +162,17 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.4); /* White background */
+            background-color: rgba(255, 255, 255, 0.4);
             display: flex;
-            justify-content: flex-end; /* Aligns the links to the right */
+            justify-content: flex-end;
             padding: 10px 20px;
-            z-index: 100; /* Make sure the navbar stays on top */
+            z-index: 100;
         }
 
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 20px; /* Spacing between links */
+            gap: 20px;
             margin-right: 200px;
         }
 
@@ -186,20 +181,58 @@
         }
 
         .nav-links a img {
-            width: 30px; /* Logo size */
+            width: 30px;
             height: auto;
             vertical-align: middle;
         }
 
         .nav-links a:hover {
-            opacity: 0.8; /* Slight hover effect */
+            opacity: 0.8;
+        }
+
+        /* Media queries for mobile */
+        @media (max-width: 768px) {
+            /* Adjust intro section for mobile */
+            #intro {
+                background-size: cover;
+                background-position: center;
+            }
+
+            .heartbeat-logo img {
+                width: 40vw; /* Adjust logo size for mobile */
+                right: 5vw; /* Adjust logo position for smaller screens */
+                top: 10vh; /* Move the logo closer to the top on mobile */
+            }
+
+            /* Stack the columns vertically for mobile */
+            .columns {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            /* Adjust container padding */
+            .container {
+                padding: 10px;
+            }
+
+            /* Smaller fonts for mobile */
+            body {
+                font-size: 18px;
+            }
+
+            .latest-release-section h2 {
+                font-size: 1.5em;
+            }
+
+            .nav-links {
+                margin-right: 50px;
+            }
         }
 
     </style>
 </head>
 <body>
 
-    <!-- Add this navigation bar at the top of the body -->
     <nav class="top-nav">
         <ul class="nav-links">
             <li><a href="https://open.spotify.com/artist/4v0TEcF4RlqUlF5NQm6zFQ?si=sw4LBaMQSI-o2AcVyGgGcA" target="_blank"><img src="logos/spotify-logo.png" alt="Spotify"></a></li>
@@ -223,12 +256,11 @@
             <h2>Latest release | Got me Trippin</h2>
             <img src="images/latest-release.jpg" alt="Latest Release">
             <br>
-            <a href="#" target="_blank">Listen Now</a> <!-- Add your link for listening here -->
+            <a href="#" target="_blank">Listen Now</a>
         </div>
 
         <!-- Two columns: Listen and Socials -->
         <div class="columns">
-            <!-- Left Column: Listen -->
             <div class="column">
                 <h3>Listen:</h3>
                 <a href="https://open.spotify.com/artist/4v0TEcF4RlqUlF5NQm6zFQ?si=sw4LBaMQSI-o2AcVyGgGcA" target="_blank">
@@ -248,7 +280,7 @@
                 </a>
             </div>
 
-            <!-- Right Column: Socials -->
+            <!-- Socials column -->
             <div class="column">
                 <h3>Socials:</h3>
                 <a href="https://www.instagram.com/reilyfisha/" target="_blank">
@@ -268,22 +300,45 @@
         <p>© 2024 Reily Fisher. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript to handle the scroll and fade effect -->
+    <!-- JavaScript to handle dynamic resizing and scrolling fade effect -->
     <script>
-        window.addEventListener('scroll', function () {
-            const scrollPosition = window.scrollY;
+        function adjustLogoAndIntro() {
+            const heartbeatLogo = document.querySelector('.heartbeat-logo img');
             const introSection = document.getElementById('intro');
-            const heartbeatLogo = document.querySelector('.heartbeat-logo'); // Select the logo
+            const windowWidth = window.innerWidth;
             const windowHeight = window.innerHeight;
 
-            // Adjust to make the opacity reach 10% after scrolling a quarter of the way down
+            // Adjust the size of the logo based on window width
+            heartbeatLogo.style.width = windowWidth * 0.2 + 'px'; // 20% of the window width
+            heartbeatLogo.parentNode.style.top = windowHeight * 0.25 + 'px';  // 25% from the top of the window
+            heartbeatLogo.parentNode.style.right = windowWidth * 0.05 + 'px'; // 5% from the right
+
+            // Adjust the size of the intro background based on window height
+            introSection.style.height = windowHeight + 'px'; // Make intro section take up the entire window height
+        }
+
+        function handleScrollFade() {
+            const scrollPosition = window.scrollY;
+            const introSection = document.getElementById('intro');
+            const heartbeatLogo = document.querySelector('.heartbeat-logo');
+            const windowHeight = window.innerHeight;
+
+            // Calculate the opacity based on scroll position
             const fadeOutEffect = 1 - (scrollPosition / (windowHeight / 4)) * 0.9;
-            
+
             // Apply fade-out effect to both the intro background and the logo
             introSection.style.opacity = fadeOutEffect > 0.1 ? fadeOutEffect : 0.1; // Minimum opacity at 10%
             heartbeatLogo.style.opacity = fadeOutEffect > 0.1 ? fadeOutEffect : 0; // Fade logo to 0
-        });
+        }
+
+        // Adjust on window resize and handle scroll fade
+        window.addEventListener('resize', adjustLogoAndIntro);
+        window.addEventListener('scroll', handleScrollFade);
+
+        // Initial adjustment and fade handling
+        adjustLogoAndIntro();
+        handleScrollFade();
     </script>
-    
+
 </body>
 </html>
