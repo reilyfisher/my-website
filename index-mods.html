@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Load Comic Sans for desktop and Roboto for mobile -->
     <link href="https://fonts.cdnfonts.com/css/comic-sans-ms" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reily Fisher - Social Links</title>
     <style>
-        /* Body and general styling */
+        /* Body and general styling for desktop */
         body {
-            font-family: 'Comic Sans MS','Comic Sans', sans-serif; /* Default font */
+            font-family: 'Comic Sans MS','Comic Sans', sans-serif; /* Default font for desktop */
             margin: 0;
             padding: 0;
             font-size: 22px;
@@ -46,6 +48,7 @@
             padding: 20px;
         }
 
+        /* Heartbeat logo */
         .heartbeat-logo {
             position: absolute;
             z-index: 2;
@@ -70,11 +73,6 @@
             text-align: center;
             max-width: 100%;
             padding: 20px;
-        }
-
-        .latest-release-section {
-            margin-top: 50px;
-            text-align: center;
         }
 
         .latest-release-section h2 {
@@ -186,11 +184,17 @@
 
         /* Media queries for mobile */
         @media (max-width: 768px) {
+            /* Change font to Roboto for mobile */
             body {
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Roboto', sans-serif; /* Use Roboto for mobile */
                 font-size: 18px;
             }
+            
+            .latest-release-section h2, .column h3 {
+                font-family: 'Roboto', sans-serif; /* Change headings to Roboto on mobile */
+            }
 
+            /* Adjust intro section for mobile */
             #intro {
                 background-size: 100%;
                 background-position: center;
@@ -198,11 +202,12 @@
             }
 
             .heartbeat-logo img {
-                width: 30vw;
+                width: 30vw; /* Adjust logo size for mobile */
                 right: 40px;
                 top: 40px;
             }
 
+            /* Stack the columns vertically for mobile */
             .columns {
                 flex-direction: column;
                 gap: 20px;
@@ -216,14 +221,15 @@
                 font-size: 1.5em;
             }
 
+            /* Adjust right margin for mobile */
             .top-nav {
-                padding-right: 10px;
+                padding-right: 10px; /* Make sure the logos align to the right */
                 justify-content: center;
             }
 
             .nav-links {
-                gap: 10px;
-                margin-right: 0;
+                gap: 10px; /* Reduce gap for mobile */
+                margin-right: 0; /* Remove excess right margin */
             }
         }
     </style>
@@ -240,12 +246,14 @@
         </ul>
     </nav>
 
+    <!-- Fullscreen intro section with the logo -->
     <div id="intro">
         <div class="heartbeat-logo">
             <img src="logos/heartbeat-logo.png" alt="Heartbeat Logo">
         </div>
     </div>
 
+    <!-- Content that appears after scrolling down -->
     <div id="content">
         <div class="container latest-release-section">
             <h2>Latest release | Got me Trippin</h2>
@@ -254,6 +262,7 @@
             <a href="#" target="_blank">Listen Now</a>
         </div>
 
+        <!-- Two columns: Listen and Socials -->
         <div class="columns">
             <div class="column">
                 <h3>Listen:</h3>
@@ -293,6 +302,7 @@
         <p>© 2024 Reily Fisher. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript to handle dynamic resizing and scrolling fade effect -->
     <script>
         function adjustLogoAndIntro() {
             const heartbeatLogo = document.querySelector('.heartbeat-logo img');
@@ -300,12 +310,10 @@
             const windowWidth = window.innerWidth;
             const windowHeight = window.innerHeight;
 
-            // Adjust the size of the logo based on window width
-            heartbeatLogo.style.width = windowWidth * 0.2 + 'px'; // 20% of the window width
-            heartbeatLogo.parentNode.style.top = windowHeight * 0.25 + 'px';  // 25% from the top of the window
-            heartbeatLogo.parentNode.style.right = windowWidth * 0.05 + 'px'; // 5% from the right
+            heartbeatLogo.style.width = windowWidth * 0.2 + 'px';
+            heartbeatLogo.parentNode.style.top = windowHeight * 0.25 + 'px';
+            heartbeatLogo.parentNode.style.right = windowWidth * 0.05 + 'px';
 
-            // Adjust the size of the intro background based on window height
             introSection.style.height = windowHeight + 'px';
         }
 
@@ -330,3 +338,4 @@
 
 </body>
 </html>
+
