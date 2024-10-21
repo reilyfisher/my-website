@@ -30,36 +30,37 @@
             transition: background-image 1s ease;
         }
 
-        /* Fullscreen intro section with stagnant background */
+        /* Fullscreen intro section with responsive background */
         #intro {
-            position: fixed; /* Keep the intro section fixed */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100vh;
-            background-image: url('images/intro-photo.png'); /* Initial full-screen photo */
-            background-size: cover;
-            background-position: center;
+            background-image: url('images/intro-photo.png'); /* Full-screen photo */
+            background-size: cover; /* Dynamically adjusts based on viewport */
+            background-position: center center; /* Center the image on both axes */
+            background-repeat: no-repeat;
             z-index: 1;
             display: flex;
-            justify-content: flex-end; /* Align logo to top-right */
+            justify-content: flex-end;
             align-items: flex-start;
-            opacity: 1; /* Full opacity initially */
-            transition: opacity 1s ease; /* Smooth fade-out */
-            padding: 20px; /* Add padding to create space for logo */
+            opacity: 1;
+            transition: opacity 1s ease;
+            padding: 20px;
         }
 
-        /* Logo inside the intro section, aligned top-right */
-        .heartbeat-logo {
-            position: absolute;
-            top: 200px; /* Top margin of 200px */
-            right: 200px; /* Right margin of 200px */
-            z-index: 2;
-            transition: opacity 1s ease; /* Smooth fade-out */
-        }
+    /* Heartbeat logo dynamically positioned and sized */
+    .heartbeat-logo {
+        position: absolute;
+        top: 20vh; /* 20% from the top of the viewport */
+        right: 6vw; /* 7% from the right of the viewport */
+        z-index: 2;
+        transition: opacity 1s ease;
+    }
 
         .heartbeat-logo img {
-            width: 450px; /* 1.5 times the original size */
+            width: 25vw; /* Adjust the size based on viewport width */
             height: auto;
         }
 
