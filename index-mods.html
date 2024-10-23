@@ -185,18 +185,38 @@
         /* Media queries for mobile */
         @media (max-width: 768px) {
             /* Change font to Roboto for mobile */
+            body {
+                font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+                font-size: 18px;
+            }
+            
+            .latest-release-section h2, .column h3 {
+                font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            }
 
             /* Adjust intro section for mobile */
             #intro {
                 background-size: 100%;
                 background-position: center;
                 height: 100vh;
+                display: flex;
+                justify-content: center; /* Center the content horizontally */
+                align-items: center;     /* Center the content vertically */
+
+            }
+            .heartbeat-logo {
+                position: relative; /* Change positioning to relative for centering */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgba(255, 255, 255, 0.08); /* Semi-transparent white oval */
+                padding: 10px 30px; /* Adjust padding to create an oval shape */
+                border-radius: 50px; /* Make the background oval-shaped */
             }
 
+
             .heartbeat-logo img {
-                width: 30vw; /* Adjust logo size for mobile */
-                right: 40px;
-                top: 40px;
+                width: 25vw; /* Adjust logo size for mobile */
             }
 
             /* Stack the columns vertically for mobile */
